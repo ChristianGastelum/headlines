@@ -1,0 +1,18 @@
+<html>
+    <body>
+        <h1>headlines</h1>
+        <b>{{title}}</b> <br/>
+        <i>{{published}}</i> <br/>
+        <p>{{summary}}</p> <br/>
+    </body>
+</html>
+
+<!-- 
+Double braces, indicate to Jinja that anything inside them
+should not be taken as literal HTML code. Because our placeholders,
+title,etc, are the same as our Python variables names passed into the
+render_template call, just adding the braces will subtitute there
+for the real data.
+
+
+-->
