@@ -1,11 +1,18 @@
 <html>
-    <body>
-        <h1>headlines</h1>
-        <b>{{title}}</b> <br/>
-        <i>{{published}}</i> <br/>
-        <p>{{summary}}</p> <br/>
-    </body>
-</html>
+        <head>
+            <title>Headlines</title>
+        </head>
+        <body>
+            <h1>Headlines</h1>
+            {% for article in articles %}
+                <b><a href="{{article.link}}">{{article.title}}</a></b><br />
+                <i>{{article.published}}</i><br />
+                <p>{{article.summary}}</p> 
+                <hr />
+            {% endfor %}
+         
+        </body>
+    </html>
 
 <!-- 
 Double braces, indicate to Jinja that anything inside them
