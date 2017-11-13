@@ -4,6 +4,19 @@
         </head>
         <body>
             <h1>Headlines</h1>
+            <form>
+                <!--We create an HTML form element. By default this will create an 
+                HTTP GET Request when submitted, by passing any inputs as GET
+                arguments into the URL.-->
+                <input type="text" name="publication" placeholder="search"   />
+                <!--We have a single text input which has 
+                the name publication. This name is important as the GET 
+                arguments will use this.
+                -->
+                <input type="submit" value="Submit" />
+            </form>
+             
+
             {% for article in articles %}
                 <b><a href="{{article.link}}">{{article.title}}</a></b><br />
                 <i>{{article.published}}</i><br />
