@@ -15,7 +15,10 @@ RSS_FEEDS = {
 @app.route("/")
 
 @app.route("/<publication>")
-
+"""
+Creates an argument called publication, which we need to add as a parameter of the function directly,
+below the route
+"""
 def get_news(publication="cnn"):
     feed = feedparser.parse(RSS_FEEDS[publication])
     first_article = feed['entries'][0]
